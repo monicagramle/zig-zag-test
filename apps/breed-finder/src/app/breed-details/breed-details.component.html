@@ -1,0 +1,9 @@
+<div *ngIf="breedDetails$ | async as breedDetails">
+    <h1>{{ breedDetails.name }}</h1>
+    <p>{{ breedDetails.description }}</p>
+    <p>Size: {{ breedDetails.size }}</p>
+    <p>Origin: {{ breedDetails.origin }}</p>
+    <p>Life Expectancy: {{ breedDetails.lifeExpectancy }}</p>
+    <p>Temperament: {{ breedDetails.temperament.join(', ') }}</p>
+    <img [src]="breedDetails.image" alt="{{ breedDetails.name }}">
+  </div>
