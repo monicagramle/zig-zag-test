@@ -1,6 +1,6 @@
 .overview {
     margin-top: 40px;
-
+    
   &__search-bar {
     margin-bottom: 40px;
     align-items: center;
@@ -22,6 +22,7 @@
   }
 
   &__primary-breed-button {
+    color: white;
     margin: 4px 0;
     width: 20%;
   }
