@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -8,4 +8,11 @@ import { RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['header.component.scss']
 })
-export class HeaderPageComponent {}
+export class HeaderPageComponent {
+
+  constructor(private router: Router){}
+
+  Home(){
+    this.router.navigate(['']);
+  }
+}

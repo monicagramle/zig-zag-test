@@ -1,10 +1,30 @@
 .overview {
-  &__title {
     margin-top: 40px;
+
+  &__search-bar {
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__search {
+    flex: auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
   }
 
   &__breed-button {
     margin: 4px 0;
     width: 100%;
   }
+
+  &__primary-breed-button {
+    margin: 4px 0;
+    width: 20%;
+  }
 }
+
+

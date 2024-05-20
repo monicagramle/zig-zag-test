@@ -1,9 +1,13 @@
-<div *ngIf="breedDetails$ | async as breedDetails">
-    <h1>{{ breedDetails.name }}</h1>
-    <p>{{ breedDetails.description }}</p>
-    <p>Size: {{ breedDetails.size }}</p>
-    <p>Origin: {{ breedDetails.origin }}</p>
-    <p>Life Expectancy: {{ breedDetails.lifeExpectancy }}</p>
-    <p>Temperament: {{ breedDetails.temperament.join(', ') }}</p>
-    <img [src]="breedDetails.image" alt="{{ breedDetails.name }}">
+<div *ngIf="breedDetails$ | async as breedDetails" class="breed-card">
+  <h1>{{ breedDetails.name }}</h1>
+  <div class="breed-card-content">
+    <p class="description">{{ breedDetails.description }}</p>
+    <div class="details">
+      <p><strong>Size:</strong> {{ breedDetails.size }}</p>
+      <p><strong>Origin:</strong> {{ breedDetails.origin }}</p>
+      <p><strong>Life Expectancy:</strong> {{ breedDetails.lifeExpectancy }}</p>
+      <p><strong>Temperament:</strong> {{ breedDetails.temperament.join(', ') }}</p>
+    </div>
+    <img class="breed-image" [src]="breedDetails.image" alt="{{ breedDetails.name }}">
   </div>
+</div>

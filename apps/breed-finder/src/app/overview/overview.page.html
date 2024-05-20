@@ -1,10 +1,11 @@
 <div class="container-md overview">
-  <div class="row">
-    <div class="col-12">
-      <h4 class="overview__title">Select your breed</h4>
+  <div class="row align-items-center">
+    <div class="col-12 d-flex overview__search-bar">
+      <input type="text" class="overview__search" placeholder="Search your breed" #filter>
+      <button class="btn btn-primary overview__primary-breed-button" type="button" (click)="filterResults(filter.value)">Search</button>
     </div>
 
-    @for (breed of breedList$ | async; track breed) {
+    @for (breed of filteredBreedList$ | async; track breed) {
       <div class="col-12 col-sm-6 col-lg-3">
         <button type="button" class="btn btn-secondary overview__breed-button" (click)="onBreedClick(breed)">{{ breed }}</button>
       </div>
